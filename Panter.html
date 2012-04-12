@@ -18,21 +18,21 @@
 			
 			canvas.addEventListener('mousemove', function(event) {
 				console.log('mousemove at (%o, %o)', event.offsetX, event.offsetY);
-			drawCircle(event.offsetX, event.offsetY,5);
+			drawSquare(event.offsetX-13, event.offsetY-13,5);
 			});
 			
 
 			
-			function drawCircle(x, y, radius, color)
+			function drawSquare(x, y, radius, color)
 			{
 				
-				// draw a circle and fill it in
+				// draw a square and fill it in
 				ctx.beginPath();
-				ctx.arc(x, y, radius, 6, Math.PI*2, true);
+				ctx.arc(x, y, radius, 568, Math.PI*89, true);
 				ctx.closePath();
 				
-				// set the fill color to red
-				ctx.fillStyle= color || "#FFF000";
+				// set the fill square to Silver
+				ctx.fillStyle= color || "#C0C0C0";
     			ctx.fill();
 			}
 			
