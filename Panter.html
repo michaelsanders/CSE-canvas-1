@@ -11,10 +11,25 @@
 	<body>
 		<canvas width="250" height="250" id="myCanvas"></canvas>
 		
+		<p><label>Drawing tool: <select id="dtool">
+  <option value="rect">Rectangle</option>
+  <option value="Tri">Triangle</option>
+  <option value="Pent">Pentagon</option>
+  <option value="Hex">Hexagon</option>
+  <option value="Hect">Hectogon</option>
+  <option value="Oct">Octogon</option>
+  <option value="Tri">Triangle</option>
+  <option value="Dec">Decegon</option>
+</select></label></p>
 		
 		<script>
 			var canvas = document.getElementById('myCanvas');
 			var ctx = canvas.getContext('2d');
+			
+
+
+
+
 			
 			canvas.addEventListener('mousemove', function(event) {
 				console.log('mousemove at (%o, %o)', event.offsetX, event.offsetY);
@@ -35,6 +50,22 @@
 				ctx.fillStyle= color || "#C0C0C0";
     			ctx.fill();
 			}
+			
+			function clearCanvas(x,y,w,h) {
+			ctx.clearRect(x,y,w,h)
+			
+			clearCanvas(block.x,block.y,block.w,block.h);
+            block.x += 1;
+            block.y += 1;
+            ctx.fillRect(block.x,block.y,block.w,block.h);
+
+
+}
+
+}
+		
+
+			
 			
 			
 		</script>
